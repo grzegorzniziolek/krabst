@@ -1,0 +1,10 @@
+:root {
+  --bg-main:   #F9F5F2;
+  --bg-light:  #FFFFFF;
+  --accent:    #B76E79;
+  --accent-dk: #9d5565;
+  --accent-lt: #EBD6D1;
+  --text-main: #222;
+  --text-mut:  #555;
+  --font-main: "Inter", Arial, sans-serif;
+} 
