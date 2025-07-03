@@ -1,0 +1,154 @@
+Miejsce zajęte w 92% … Jeśli zabraknie Ci miejsca, stracisz możliwość zapisywania plików na Dysku, tworzenia kopii zapasowych w Zdjęciach Google i korzystania z Gmaila. Zyskaj 100 GB miejsca na dane przez 3 miesiące za 8,99 zł 2,25 zł (cena przygotowana specjalnie dla Ciebie).
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasetki Kosmetyczne — Produkty</title>
+
+  <!--  ▸  Minimalne SEO  ◂  -->
+  <link rel="preload" href="images/hero.webp" as="image">
+  <meta property="og:title" content="Kasetki Kosmetyczne — Produkty">
+  <meta property="og:image" content="images/og_hero.jpg">
+  <meta name="theme-color" content="#B76E79">
+
+  <!--  ▸  Style  ◂  -->
+  <style>
+    :root{
+      --bg:#F9F5F2; --paper:#fff;
+      --accent:#B76E79; --accent-dk:#9d5565;
+      --text:#222; --mut:#666;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    img{display:block;max-width:100%;height:auto;border-radius:8px}
+    a{color:inherit;text-decoration:none}
+    h1{font-size:clamp(2.1rem,5vw,3.4rem);margin:0 0 1rem}
+    h2{font-size:clamp(1.6rem,4vw,2.4rem);margin:0 0 1.5rem;text-align:center}
+    .container{width:min(1200px,90%);margin-inline:auto;padding-block:clamp(2rem,6vw,4rem)}
+
+    /*  Buttons  */
+    .btn{display:inline-block;padding:.9rem 2.2rem;border-radius:40px;font-weight:600;cursor:pointer;transition:.25s}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--accent-dk)}
+    .btn-outline{border:2px solid var(--accent);color:var(--accent)}
+    .btn-outline:hover{background:var(--accent);color:#fff}
+
+    /*  Focus  */
+    :focus-visible{outline:2px dashed var(--accent);outline-offset:4px}
+
+    /*  Hero  */
+    #hero{position:relative;min-height:80vh;display:flex;align-items:center;color:#fff}
+    #hero::before{content:"";position:absolute;inset:0;background:url("images/hero.webp") center/cover no-repeat;z-index:-2}
+    #hero::after {content:"";position:absolute;inset:0;background:linear-gradient(rgba(183,110,121,.5),rgba(0,0,0,.55));z-index:-1}
+    .hero__inner{max-width:720px;padding:2rem}
+    .cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+
+    /*  Breadcrumb (proste)  */
+    .crumb{font-size:.875rem;margin-bottom:1.5rem;color:var(--mut)}
+
+    /*  Products – 3 × 3  */
+    .wrap{border:2px solid var(--accent);border-radius:10px;background:var(--paper);padding:2rem 1rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3rem) 2rem;justify-items:center}
+    @media(max-width:840px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}}
+    .card{text-align:center;max-width:200px;transition:.3s}
+    .card img{width:160px;height:160px;object-fit:cover;margin-inline:auto;box-shadow:0 4px 14px rgba(0,0,0,.07)}
+    .card:hover{transform:translateY(-4px)}
+    .card figcaption{margin-top:.75rem;font-size:.875rem;color:var(--mut)}
+
+    /*  Footer  */
+    footer{background:#1b1b1b;color:#fff;text-align:center;padding:3rem 1rem;margin-top:clamp(3rem,8vw,5rem)}
+    footer .btn-primary:hover{background:#fff;color:#1b1b1b}
+  </style>
+</head>
+<body>
+
+  <!--  ▸  Hero / Nagłówek  ◂  -->
+  <header id="hero">
+    <div class="container hero__inner">
+      <h1>Kasetki zaprojektowane, by Twój kosmetyk wyglądał jeszcze lepiej.</h1>
+      <p>Od pojedynczych panów po 9-polowe układy — gotowe formy, gotowe na personalizację.</p>
+      <div class="cta">
+        <a href="index.html"         class="btn btn-outline">Strona główna</a>
+        <a href="#produkty"          class="btn btn-primary">Zobacz produkty</a>
+        <a href="index.html#kontakt" class="btn btn-outline">Zapytaj o ofertę</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!--  Breadcrumb  -->
+      <div class="crumb"><a href="index.html">Home</a> &rsaquo; Produkty</div>
+
+      <!--  Produkty  -->
+      <section id="produkty" class="wrap">
+        <h2>Produkty</h2>
+
+        <div class="grid">
+          <!-- 1 -->
+          <figure class="card">
+            <img src="images/bordowa_trio.webp" alt="Paletka bordowa Trio — 3 panów Ø27 mm">
+            <figcaption>Paletka Trio<br><small>Bordowy, 3&nbsp;× 27 mm</small></figcaption>
+          </figure>
+          <!-- 2 -->
+          <figure class="card">
+            <img src="images/solo_kwadratowa.webp" alt="Kasetka solo kwadratowa — Ø59 mm">
+            <figcaption>Solo Kwadratowa<br><small>Ø 59 mm</small></figcaption>
+          </figure>
+          <!-- 3 -->
+          <figure class="card">
+            <img src="images/solo_okragla.webp" alt="Kasetka solo okrągła — Ø63 mm">
+            <figcaption>Solo Okrągła<br><small>Ø 63 mm</small></figcaption>
+          </figure>
+          <!-- 4 -->
+          <figure class="card">
+            <img src="images/liner.webp" alt="Kasetka Liner — 6 małych panów">
+            <figcaption>Liner 6-polowa<br><small>6 małych panów</small></figcaption>
+          </figure>
+          <!-- 5 -->
+          <figure class="card">
+            <img src="images/x_ksztaltna.webp" alt="Kasetka 9-polowa X-kształtna">
+            <figcaption>9-polowa X<br><small>Ø 26 mm</small></figcaption>
+          </figure>
+          <!-- 6 -->
+          <figure class="card">
+            <img src="images/okragla_4.webp" alt="Kasetka 4-polowa okrągła">
+            <figcaption>4-polowa O<br><small>4 × Ø 30 mm</small></figcaption>
+          </figure>
+          <!-- 7 -->
+          <figure class="card">
+            <img src="images/wysoka_pionowa.webp" alt="Kasetka wysoka pionowa, Ø50 mm">
+            <figcaption>Wysoka Ø 50 mm<br><small>pionowa</small></figcaption>
+          </figure>
+          <!-- 8 -->
+          <figure class="card">
+            <img src="images/kwadratowa_zasobniki.webp" alt="Kasetka 6-polowa + zasobnik">
+            <figcaption>6-polowa + zasobnik<br><small>mix Ø 26 mm</small></figcaption>
+          </figure>
+          <!-- 9 -->
+          <figure class="card">
+            <img src="images/okragla_podparcie.webp" alt="Kasetka okrągła z podparciem X">
+            <figcaption>Okrągła X-support<br><small>Ø 63 mm</small></figcaption>
+          </figure>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align:center;margin-top:clamp(2rem,6vw,3rem)">
+          <a href="catalog.pdf" class="btn btn-primary" download>Pobierz katalog PDF</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!--  Footer  -->
+  <footer id="kontakt">
+    <h2>Masz pytania? Porozmawiajmy.</h2>
+    <p>Zostaw kontakt — wrócimy do Ciebie w ciągu 24 h z wyceną prototypu.</p>
+    <a href="mailto:kontakt@twojakasetka.pl" class="btn btn-primary">Napisz do nas</a>
+    <p style="margin-top:2rem;font-size:.875rem;opacity:.75">© 2024 Twoja Kasetka Sp.&nbsp;z&nbsp;o.o.</p>
+  </footer>
+</body>
+</html>

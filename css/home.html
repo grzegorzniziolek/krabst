@@ -1,3 +1,4 @@
+Miejsce zajęte w 92% … Jeśli zabraknie Ci miejsca, stracisz możliwość zapisywania plików na Dysku, tworzenia kopii zapasowych w Zdjęciach Google i korzystania z Gmaila. Zyskaj 100 GB miejsca na dane przez 3 miesiące za 8,99 zł 2,25 zł (cena przygotowana specjalnie dla Ciebie).
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -5,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kasetki Kosmetyczne — Strona Główna</title>
 
-  <link rel="stylesheet" href="css/variables.css">
   <style>
     /* ===== PALETA KOLORÓW ===== */
     :root{
@@ -57,7 +57,7 @@
       min-height:85vh;
       display:flex;
       align-items:center;
-      color:#16af8e;
+      color:#fff;
     }
     #home::before{
       content:"";
@@ -142,17 +142,6 @@
     }
     footer .btn-primary{background:var(--accent)}
     footer .btn-primary:hover{background:var(--accent-dk)}
-
-    /* ===== ANIMACJE PRZEJŚĆ ===== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
-    }
   </style>
 </head>
 <body>
@@ -165,17 +154,28 @@
       <p class="usp">Prototyp w kilka tygodni, produkcja wtedy, gdy jest Ci potrzebna.</p>
 
       <div class="cta-group">
-        <a href="home.html"     class="btn btn-active">Home</a>
-        <a href="produkty.html" class="btn btn-outline">Produkty</a>
-        <a href="onas.html"     class="btn btn-outline">O&nbsp;nas</a>
-        <a href="#kontakt"      class="btn btn-outline">Zapytaj o ofertę</a>
+        <a href="#home"     class="btn btn-active">Home</a>
+        <a href="#products" class="btn btn-outline">Produkty</a>
+        <a href="#about"    class="btn btn-outline">O&nbsp;nas</a>
+        <a href="#kontakt"  class="btn btn-outline">Zapytaj o ofertę</a>
       </div>
     </div>
   </header>
 
   <main>
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <h2>Kim jesteśmy</h2>
+          <p>Projektujemy i produkujemy opakowania kosmetyczne, które łączą wysoką estetykę z funkcjonalnością — od pierwszej koncepcji po seryjną produkcję. Nasze pudełka podkreślają wizerunek marki i skutecznie eksponują produkt na każdym etapie kontaktu z klientem.</p> <p>Oferujemy rozbudowaną kolekcję form katalogowych oraz realizację projektów indywidualnych. Zapewniamy pełne wsparcie: projekt wzorniczy, prototypowanie i produkcję, dostarczając opakowania precyzyjnie dopasowane do wymagań danej marki.</p>
+        </div>
+        <img src="https://cobouw.pl/wp-content/uploads/produkcyjne-tresc1a-duze.jpg" alt="Hala produkcyjna z wtryskarkami">
+      </div>
+    </section>
+
     <!-- ===== PROCESS ===== -->
-    <section id="process" class="fade-in">
+    <section id="process">
       <div class="container">
         <h2>Nasz proces</h2>
 
@@ -211,7 +211,7 @@
     </section>
 
     <!-- ===== ECO ===== -->
-    <section id="eco" class="fade-in">
+    <section id="eco">
       <div class="container">
         <h2>Odpowiedzialna produkcja</h2>
         <ul>
@@ -221,10 +221,27 @@
         </ul>
       </div>
     </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section id="products">
+      <div class="container">
+        <h2>Gotowe produkty</h2>
+        <p>Przykładowe wykończenia i projekty, które możemy zrealizować.</p>
+
+        <div class="product-grid">
+          <img src="images/finish_softtouch.webp"  alt="Kasetka soft-touch">
+          <img src="images/finish_gloss.webp"      alt="Kasetka piano gloss">
+          <img src="images/finish_holo.webp"       alt="Kasetka holo foil">
+          <img src="images/finish_metallic.webp"   alt="Kasetka metaliczna">
+          <img src="images/finish_clear.webp"      alt="Kasetka transparentna">
+          <img src="images/finish_pastel.webp"     alt="Kasetka pastelowa">
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer id="kontakt" class="fade-in">
+  <footer id="kontakt">
     <h2>Masz pytania? Porozmawiajmy.</h2>
     <p>Zostaw kontakt — wrócimy do Ciebie w ciągu 24 h z wyceną prototypu.</p>
     <a href="mailto:kontakt@twojakasetka.pl" class="btn btn-primary">Napisz do nas</a>
@@ -232,23 +249,5 @@
       © 2024 Twoja Kasetka Sp. z o.o. | NIP 000-000-00-00
     </p>
   </footer>
-  <script>
-    // Animacja fade-in sekcji podczas przewijania
-    document.addEventListener('DOMContentLoaded', function() {
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.18
-      });
-      document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-      });
-    });
-  </script>
 </body>
 </html>
