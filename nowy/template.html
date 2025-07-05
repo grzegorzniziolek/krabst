@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Szablon — Twoja Kasetka</title>
+  <meta name="description" content="Producent kasetek kosmetycznych z PP: projekt form, produkcja seryjna, wysyłka w 72 h.">
+  <link rel="canonical" href="https://twojakasetka.pl/">
+  <link rel="preload" href="images/hero.webp" as="image">
+  <link rel="preconnect" href="https://www.wzorniki.pl">
+  <link rel="preconnect" href="https://img.redro.pl">
+  <link rel="preconnect" href="https://unobrand.pl">
+  <link rel="preconnect" href="https://pro-assem.pl">
+  <link rel="preconnect" href="https://www.twojemeble.pl">
+  <link rel="preconnect" href="https://cobouw.pl">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <meta property="og:title" content="Twoja Kasetka">
+  <meta property="og:image" content="images/og_hero.jpg">
+  <meta name="theme-color" content="#D08A9D">
+  
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Twoja Kasetka Sp. z o.o.",
+    "url":"https://twojakasetka.pl",
+    "logo":"https://twojakasetka.pl/images/logo.png",
+    "telephone":"+48 123 456 789",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Krzewnika 123BC",
+      "addressLocality":"Otwock",
+      "addressCountry":"PL"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="visually-hidden">Przejdź do treści głównej</a>
+  
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="main-nav" role="navigation">
+        <a href="home.html"     class="btn btn-outline">Strona główna</a>
+        <a href="produkty.html" class="btn btn-outline">Produkty</a>
+        <a href="onas.html"     class="btn btn-outline">O nas</a>
+        <a href="#kontakt"      class="btn btn-outline" aria-label="Kontakt i wycena">Kontakt & wycena</a>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="hero">
+    <div class="container hero__inner">
+      <h1>Personalizowane kasetki dla marek beauty</h1>
+      <p class="subhead">Od projektu formy po terminową dostawę — kompleksowa realizacja nawet w 72 h.</p>
+      <a href="tel:+48123456789" class="hero-phone">+48 123 456 789</a>
+    </div>
+  </section>
+  
+  <main id="main">
+    <!-- ===== TREŚĆ GŁÓWNA ===== -->
+    
+    <!-- ===== KONTAKT ===== -->
+    <section id="kontakt">
+      <div class="container">
+        <div class="contact-form">
+          <h2>Kontakt & wycena</h2>
+          <form action="https://formspree.io/f/xyz" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Imię i nazwisko *</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="quantity">Liczba sztuk</label>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="np. 1000">
+              </div>
+              <div class="form-group">
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message" placeholder="Opisz swój projekt..."></textarea>
+              </div>
+            </div>
+            <div style="text-align:center;margin-top:2rem">
+              <button type="submit" class="btn btn-primary">Wyślij zapytanie</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <h2>Masz pytania? Porozmawiajmy.</h2>
+      <p>Zostaw kontakt — wrócimy do Ciebie w ciągu 24 h z wyceną prototypu.</p>
+      <a href="#kontakt" class="btn btn-primary">Skontaktuj się</a>
+      <address>
+        <p>+48 123 456 789</p>
+        <p>ul. Krzewnika 123BC<br>05-400 Otwock, Polska</p>
+      </address>
+      <p style="margin-top:2rem;font-size:.875rem;opacity:.75">© <span id="yr"></span> Twoja Kasetka Sp.&nbsp;z&nbsp;o.o.</p>
+    </div>
+  </footer>
+</body>
+</html> 

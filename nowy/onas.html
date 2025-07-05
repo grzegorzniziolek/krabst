@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasetki Kosmetyczne — O nas</title>
+  <meta name="description" content="Poznaj naszą firmę: 15 lat doświadczenia w produkcji kasetek kosmetycznych. Lokalna produkcja, ekologiczne materiały.">
+  <link rel="canonical" href="https://twojakasetka.pl/onas">
+  <link rel="preload" href="images/hero.webp" as="image">
+  <link rel="preconnect" href="https://www.wzorniki.pl">
+  <link rel="preconnect" href="https://img.redro.pl">
+  <link rel="preconnect" href="https://unobrand.pl">
+  <link rel="preconnect" href="https://pro-assem.pl">
+  <link rel="preconnect" href="https://www.twojemeble.pl">
+  <link rel="preconnect" href="https://cobouw.pl">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <meta property="og:title" content="Kasetki Kosmetyczne — O nas">
+  <meta property="og:image" content="images/og_hero.jpg">
+  <meta name="theme-color" content="#D08A9D">
+  
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Twoja Kasetka Sp. z o.o.",
+    "url":"https://twojakasetka.pl",
+    "logo":"https://twojakasetka.pl/images/logo.png",
+    "telephone":"+48 123 456 789",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Krzewnika 123BC",
+      "addressLocality":"Otwock",
+      "addressCountry":"PL"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="visually-hidden">Przejdź do treści głównej</a>
+  
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="site-nav" role="navigation">
+        <a href="home.html"     class="btn btn-outline">Strona główna</a>
+        <a href="produkty.html" class="btn btn-outline">Produkty</a>
+        <a href="onas.html"     class="btn btn-active">O nas</a>
+        <a href="#kontakt"      class="btn btn-outline" aria-label="Kontakt i wycena">Kontakt & wycena</a>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="hero" class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1>Kim jesteśmy</h1>
+        <p class="subhead">Poznaj naszą firmę i wartości, które przyświecają nam od 15 lat.</p>
+        <a href="tel:+48123456789" class="hero-phone">+48 123 456 789</a>
+      </div>
+
+      <div class="hero-visual">
+        <img src="https://www.e-glamour.pl/data/cache/thumb_min500_max1000-min500_max1000-12/products/21910/1692298426/artdeco-beauty-box-trio-pudelko-do-uzupelnienia-dla-kobiet-1-szt-188338.jpg" alt="Przykładowa kasetka kosmetyczna Artdeco">
+      </div>
+    </div>
+  </section>
+  
+  <main id="main">
+    <!-- ===== O NAS ===== -->
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-content">
+          <h2>O nas</h2>
+          <p>Jesteśmy polskim producentem opakowań kosmetycznych, który od lat wspiera marki w budowaniu rozpoznawalności i jakości. Nasz zespół to doświadczeni projektanci i inżynierowie, którzy dbają o każdy detal — od koncepcji po gotowy produkt.</p>
+          <p>Naszą misją jest dostarczanie rozwiązań, które są nie tylko estetyczne, ale i przyjazne środowisku. Stawiamy na innowacje, lokalną produkcję i partnerskie relacje z klientami.</p>
+          <ul style="margin-top:2rem;list-style:disc inside;color:var(--mut)">
+            <li>Indywidualne podejście do każdego projektu</li>
+            <li>Własne biuro projektowe i prototypownia</li>
+            <li>Produkcja w Polsce, krótkie terminy</li>
+            <li>Ekologiczne materiały i recykling</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://cobouw.pl/wp-content/uploads/produkcyjne-tresc1a-duze.jpg" alt="Hala produkcyjna z wtryskarkami" loading="lazy" decoding="async" width="600" height="400">
+          <div class="image-caption">Nasza hala produkcyjna</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ===== KONTAKT ===== -->
+    <section id="kontakt">
+      <div class="container">
+        <div class="contact-form">
+          <h2>Kontakt & wycena</h2>
+          <form action="https://formspree.io/f/xyz" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Imię i nazwisko *</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="quantity">Liczba sztuk</label>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="np. 1000">
+              </div>
+              <div class="form-group">
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message" placeholder="Opisz swój projekt..."></textarea>
+              </div>
+            </div>
+            <div style="text-align:center;margin-top:2rem">
+              <button type="submit" class="btn btn-primary">Wyślij zapytanie</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <h2>Masz pytania? Porozmawiajmy.</h2>
+      <p>Zostaw kontakt — wrócimy do Ciebie w ciągu 24 h z wyceną prototypu.</p>
+      <a href="#kontakt" class="btn btn-primary">Skontaktuj się</a>
+      <address>
+        <p>+48 123 456 789</p>
+        <p>ul. Krzewnika 123BC<br>05-400 Otwock, Polska</p>
+      </address>
+      <p style="margin-top:2rem;font-size:.875rem;opacity:.75">© <span id="yr"></span> Twoja Kasetka Sp.&nbsp;z&nbsp;o.o.</p>
+    </div>
+  </footer>
+</body>
+</html> 
