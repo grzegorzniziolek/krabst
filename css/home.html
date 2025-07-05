@@ -1,184 +1,92 @@
-Miejsce zajęte w 92% … Jeśli zabraknie Ci miejsca, stracisz możliwość zapisywania plików na Dysku, tworzenia kopii zapasowych w Zdjęciach Google i korzystania z Gmaila. Zyskaj 100 GB miejsca na dane przez 3 miesiące za 8,99 zł 2,25 zł (cena przygotowana specjalnie dla Ciebie).
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kasetki Kosmetyczne — Strona Główna</title>
-
+  <link rel="preload" href="images/hero.webp" as="image">
+  <meta property="og:title" content="Kasetki Kosmetyczne — Strona Główna">
+  <meta property="og:image" content="images/og_hero.jpg">
+  <meta name="theme-color" content="#B76E79">
   <style>
-    /* ===== PALETA KOLORÓW ===== */
     :root{
-      --bg-main:   #F9F5F2;   /* ciepły beż tła */
-      --bg-light:  #FFFFFF;   /* biały dla kart */
-      --accent:    #B76E79;   /* stonowany róż */
-      --accent-dk: #9d5565;   /* ciemniejszy róż */
-      --accent-lt: #EBD6D1;   /* jasny beż-róż */
-      --text-main: #222;
-      --text-mut:  #555;
+      --bg:#F9F5F2; --paper:#fff;
+      --accent:#B76E79; --accent-dk:#9d5565;
+      --text:#222; --mut:#666;
     }
-
-    /* ===== RESET & TYPO ===== */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:"Inter",Arial,sans-serif;
-      background:var(--bg-main);
-      color:var(--text-main);
-      line-height:1.55;
-      -webkit-font-smoothing:antialiased;
-    }
+    body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
     img{display:block;max-width:100%;height:auto;border-radius:8px}
-    a{text-decoration:none;color:inherit}
-    h1,h2,h3{font-weight:700;line-height:1.2;margin-bottom:1rem}
-    h1{font-size:clamp(2.2rem,5vw,3.8rem)}
-    h2{font-size:clamp(1.6rem,4vw,2.6rem)}
-    h3{font-size:1.3rem;margin-bottom:.5rem}
-    p {margin-bottom:1rem;color:var(--text-mut)}
-    .container{width:min(1200px,90%);margin-inline:auto;padding-block:4rem}
-
-    /* ===== PRZYCISKI ===== */
-    .btn{
-      display:inline-block;
-      padding:.9rem 2.2rem;
-      border-radius:40px;
-      font-weight:600;
-      cursor:pointer;
-      transition:background .25s,color .25s,box-shadow .25s;
-    }
+    a{color:inherit;text-decoration:none}
+    h1{font-size:clamp(2.1rem,5vw,3.4rem);margin:0 0 1rem}
+    h2{font-size:clamp(1.6rem,4vw,2.4rem);margin:0 0 1.5rem;text-align:center}
+    .container{width:min(1200px,90%);margin-inline:auto;padding-block:clamp(2rem,6vw,4rem)}
+    /*  Hero  */
+    #hero{position:relative;min-height:80vh;display:flex;align-items:center;color:#fff}
+    #hero::before{content:"";position:absolute;inset:0;background:url("images/hero.webp") center/cover no-repeat;z-index:-2}
+    #hero::after {content:"";position:absolute;inset:0;background:linear-gradient(rgba(183,110,121,.5),rgba(0,0,0,.55));z-index:-1}
+    .hero__inner{max-width:720px;padding:2rem}
+    .cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+    /*  Buttons  */
+    .btn{display:inline-block;padding:.9rem 2.2rem;border-radius:40px;font-weight:600;cursor:pointer;transition:.25s}
     .btn-primary{background:var(--accent);color:#fff}
-    .btn-primary:hover{background:var(--accent-dk);box-shadow:0 6px 14px rgba(0,0,0,.12)}
-    .btn-outline{border:2px solid var(--accent);color:var(--accent);background:transparent}
+    .btn-primary:hover{background:var(--accent-dk)}
+    .btn-outline{border:2px solid var(--accent);color:var(--accent)}
     .btn-outline:hover{background:var(--accent);color:#fff}
     .btn-active{background:var(--accent);color:#fff;pointer-events:none}
-
-    /* ===== HERO ===== */
-    #home{
-      position:relative;
-      min-height:85vh;
-      display:flex;
-      align-items:center;
-      color:#fff;
-    }
-    #home::before{
-      content:"";
-      position:absolute;inset:0;
-      background:url("images/hero.webp") center/cover no-repeat;
-      z-index:-2;
-    }
-    #home::after{
-      content:"";
-      position:absolute;inset:0;
-      background:linear-gradient(rgba(183,110,121,.55),rgba(0,0,0,.55));
-      z-index:-1;
-    }
-    .hero__inner{max-width:720px;padding:2rem}
-    .usp{font-size:1rem;margin-bottom:2rem;opacity:.9}
-    .cta-group{display:flex;gap:1rem;flex-wrap:wrap}
-
-    /* ===== SEKCJE ===== */
-    section[id]{scroll-margin-top:80px}
-
-    /* ABOUT */
-    #about{background:var(--bg-light)}
-    .about-grid{
-      display:grid;
-      gap:2rem;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      align-items:center;
-    }
-
-    /* PROCESS */
-    #process .steps{
-      display:grid;
-      gap:2rem;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    }
-    #process .step{
-      text-align:center;
-      padding:1.5rem;
-      border-radius:14px;
-      background:var(--bg-light);
-      box-shadow:0 4px 10px rgba(0,0,0,.05);
-    }
+    :focus-visible{outline:2px dashed var(--accent);outline-offset:4px}
+    /*  Breadcrumb (proste)  */
+    .crumb{font-size:.875rem;margin-bottom:1.5rem;color:var(--mut)}
+    /* About */
+    .about-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+    /* Process */
+    #process .steps{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+    #process .step{text-align:center;padding:1.5rem;border-radius:14px;background:var(--paper);box-shadow:0 4px 10px rgba(0,0,0,.05)}
     #process .step img{height:140px;object-fit:cover}
-
-    /* ECO */
-    #eco{background:var(--accent-lt)}
-    #eco ul{
-      list-style:none;
-      display:grid;
-      gap:2rem;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    }
-    #eco li{
-      background:var(--bg-light);
-      border-radius:14px;
-      padding:2rem;
-      text-align:center;
-      box-shadow:0 4px 10px rgba(0,0,0,.05);
-    }
-    #eco li span{
-      display:block;
-      font-size:2rem;
-      font-weight:700;
-      margin-bottom:.5rem;
-      color:var(--accent);
-    }
-
-    /* PRODUCTS */
-    #products .product-grid{
-      display:grid;
-      gap:1rem;
-      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-    }
-    #products .product-grid img{height:160px;object-fit:cover}
-
-    /* FOOTER */
-    footer{
-      background:#1b1b1b;
-      color:#fff;
-      text-align:center;
-      padding:3rem 1rem;
-    }
-    footer .btn-primary{background:var(--accent)}
-    footer .btn-primary:hover{background:var(--accent-dk)}
+    /* Eco */
+    #eco ul{list-style:none;display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    #eco li{background:var(--paper);border-radius:14px;padding:2rem;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    #eco li span{display:block;font-size:2rem;font-weight:700;margin-bottom:.5rem;color:var(--accent)}
+    /* Products */
+    .product-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:2rem}
+    .product-grid img{height:160px;object-fit:cover}
+    /* Footer */
+    footer{background:#1b1b1b;color:#fff;text-align:center;padding:3rem 1rem;margin-top:clamp(3rem,8vw,5rem)}
+    footer .btn-primary:hover{background:#fff;color:#1b1b1b}
+    /* Responsive */
+    @media(max-width:840px){.about-grid{grid-template-columns:1fr} .product-grid{grid-template-columns:repeat(2,1fr)} #eco ul{grid-template-columns:1fr}}
+    @media(max-width:560px){.product-grid{grid-template-columns:1fr} #process .steps{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-
-  <!-- ===== HERO ===== -->
-  <header id="home">
+  <header id="hero">
     <div class="container hero__inner">
       <h1>Pudełka kosmetyczne, które wzmacniają wizerunek Twojej marki.</h1>
       <p class="subhead">Od konceptu do produkcji seryjnej — wspieramy Cię na każdym etapie.</p>
-      <p class="usp">Prototyp w kilka tygodni, produkcja wtedy, gdy jest Ci potrzebna.</p>
-
-      <div class="cta-group">
-        <a href="#home"     class="btn btn-active">Home</a>
-        <a href="#products" class="btn btn-outline">Produkty</a>
-        <a href="#about"    class="btn btn-outline">O&nbsp;nas</a>
-        <a href="#kontakt"  class="btn btn-outline">Zapytaj o ofertę</a>
+      <div class="cta">
+        <a href="home.html"     class="btn btn-active">Home</a>
+        <a href="produkty.html" class="btn btn-outline">Produkty</a>
+        <a href="onas.html"     class="btn btn-outline">O&nbsp;nas</a>
+        <a href="#kontakt"      class="btn btn-outline">Kontakt</a>
       </div>
     </div>
   </header>
-
   <main>
     <!-- ===== ABOUT ===== -->
     <section id="about">
       <div class="container about-grid">
         <div>
           <h2>Kim jesteśmy</h2>
-          <p>Projektujemy i produkujemy opakowania kosmetyczne, które łączą wysoką estetykę z funkcjonalnością — od pierwszej koncepcji po seryjną produkcję. Nasze pudełka podkreślają wizerunek marki i skutecznie eksponują produkt na każdym etapie kontaktu z klientem.</p> <p>Oferujemy rozbudowaną kolekcję form katalogowych oraz realizację projektów indywidualnych. Zapewniamy pełne wsparcie: projekt wzorniczy, prototypowanie i produkcję, dostarczając opakowania precyzyjnie dopasowane do wymagań danej marki.</p>
+          <p>Projektujemy i produkujemy opakowania kosmetyczne, które łączą wysoką estetykę z funkcjonalnością — od pierwszej koncepcji po seryjną produkcję. Nasze pudełka podkreślają wizerunek marki i skutecznie eksponują produkt na każdym etapie kontaktu z klientem.</p>
+          <p>Oferujemy rozbudowaną kolekcję form katalogowych oraz realizację projektów indywidualnych. Zapewniamy pełne wsparcie: projekt wzorniczy, prototypowanie i produkcję, dostarczając opakowania precyzyjnie dopasowane do wymagań danej marki.</p>
         </div>
         <img src="https://cobouw.pl/wp-content/uploads/produkcyjne-tresc1a-duze.jpg" alt="Hala produkcyjna z wtryskarkami">
       </div>
     </section>
-
     <!-- ===== PROCESS ===== -->
     <section id="process">
       <div class="container">
         <h2>Nasz proces</h2>
-
         <div class="steps">
           <div class="step">
             <img src="https://www.wzorniki.pl/files/images/wzorniki-paletowe-25.jpg.w,1280.m.346.jpg" alt="Próbnik kasetek">
@@ -198,8 +106,7 @@ Miejsce zajęte w 92% … Jeśli zabraknie Ci miejsca, stracisz możliwość zap
           <div class="step">
             <img src="https://pro-assem.pl/wp-content/uploads/2024/03/automatyczna-linia-produkcyjna.webp" alt="Linia produkcyjna">
             <h3>Produkcja</h3>
-            <p>Produkcję prowadzimy w trybie ciągłym 24/7, zapewniając terminowe dostawy.
-</p>
+            <p>Produkcję prowadzimy w trybie ciągłym 24/7, zapewniając terminowe dostawy.</p>
           </div>
           <div class="step">
             <img src="https://www.twojemeble.pl/site/dostawa_ikonka3nowa_(1).png" alt="Wysyłka">
@@ -209,7 +116,6 @@ Miejsce zajęte w 92% … Jeśli zabraknie Ci miejsca, stracisz możliwość zap
         </div>
       </div>
     </section>
-
     <!-- ===== ECO ===== -->
     <section id="eco">
       <div class="container">
@@ -221,13 +127,11 @@ Miejsce zajęte w 92% … Jeśli zabraknie Ci miejsca, stracisz możliwość zap
         </ul>
       </div>
     </section>
-
     <!-- ===== PRODUCTS ===== -->
     <section id="products">
       <div class="container">
         <h2>Gotowe produkty</h2>
         <p>Przykładowe wykończenia i projekty, które możemy zrealizować.</p>
-
         <div class="product-grid">
           <img src="images/finish_softtouch.webp"  alt="Kasetka soft-touch">
           <img src="images/finish_gloss.webp"      alt="Kasetka piano gloss">
@@ -239,15 +143,11 @@ Miejsce zajęte w 92% … Jeśli zabraknie Ci miejsca, stracisz możliwość zap
       </div>
     </section>
   </main>
-
-  <!-- ===== FOOTER ===== -->
   <footer id="kontakt">
     <h2>Masz pytania? Porozmawiajmy.</h2>
     <p>Zostaw kontakt — wrócimy do Ciebie w ciągu 24 h z wyceną prototypu.</p>
     <a href="mailto:kontakt@twojakasetka.pl" class="btn btn-primary">Napisz do nas</a>
-    <p style="margin-top:2rem;font-size:.875rem;opacity:.8">
-      © 2024 Twoja Kasetka Sp. z o.o. | NIP 000-000-00-00
-    </p>
+    <p style="margin-top:2rem;font-size:.875rem;opacity:.75">© 2024 Twoja Kasetka Sp.&nbsp;z&nbsp;o.o.</p>
   </footer>
 </body>
 </html>

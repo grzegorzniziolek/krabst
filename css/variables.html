@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kasetki Kosmetyczne — O nas</title>
+  <title>Szablon — Twoja Kasetka</title>
   <link rel="preload" href="images/hero.webp" as="image">
-  <meta property="og:title" content="Kasetki Kosmetyczne — O nas">
+  <meta property="og:title" content="Twoja Kasetka">
   <meta property="og:image" content="images/og_hero.jpg">
   <meta name="theme-color" content="#B76E79">
   <style>
@@ -37,45 +37,30 @@
     :focus-visible{outline:2px dashed var(--accent);outline-offset:4px}
     /*  Breadcrumb (proste)  */
     .crumb{font-size:.875rem;margin-bottom:1.5rem;color:var(--mut)}
-    /* About */
-    .about-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
-    /* Footer */
+    /*  Footer  */
     footer{background:#1b1b1b;color:#fff;text-align:center;padding:3rem 1rem;margin-top:clamp(3rem,8vw,5rem)}
     footer .btn-primary:hover{background:#fff;color:#1b1b1b}
     /* Responsive */
-    @media(max-width:840px){.about-grid{grid-template-columns:1fr}}
+    @media(max-width:840px){.hero__inner{padding:1rem}}
+    @media(max-width:560px){#hero{min-height:60vh} .hero__inner{padding:0.5rem}}
   </style>
 </head>
 <body>
+  <!--  ▸  Hero / Nagłówek  ◂  -->
   <header id="hero">
     <div class="container hero__inner">
-      <h1>Poznaj naszą historię i wartości</h1>
-      <p>Tworzymy opakowania, które budują wizerunek Twojej marki.</p>
+      <h1>Twoja Kasetka — szablon</h1>
+      <p>Opis hero lub slogan. (Zmień na każdej podstronie!)</p>
       <div class="cta">
         <a href="home.html"     class="btn btn-outline">Home</a>
         <a href="produkty.html" class="btn btn-outline">Produkty</a>
-        <a href="onas.html"     class="btn btn-active">O&nbsp;nas</a>
+        <a href="onas.html"     class="btn btn-outline">O&nbsp;nas</a>
         <a href="#kontakt"      class="btn btn-outline">Kontakt</a>
       </div>
     </div>
   </header>
   <main>
-    <section id="about">
-      <div class="container about-grid">
-        <div>
-          <h2>O nas</h2>
-          <p>Jesteśmy polskim producentem opakowań kosmetycznych, który od lat wspiera marki w budowaniu rozpoznawalności i jakości. Nasz zespół to doświadczeni projektanci i inżynierowie, którzy dbają o każdy detal — od koncepcji po gotowy produkt.</p>
-          <p>Naszą misją jest dostarczanie rozwiązań, które są nie tylko estetyczne, ale i przyjazne środowisku. Stawiamy na innowacje, lokalną produkcję i partnerskie relacje z klientami.</p>
-          <ul style="margin-top:2rem;list-style:disc inside;color:var(--mut)">
-            <li>Indywidualne podejście do każdego projektu</li>
-            <li>Własne biuro projektowe i prototypownia</li>
-            <li>Produkcja w Polsce, krótkie terminy</li>
-            <li>Ekologiczne materiały i recykling</li>
-          </ul>
-        </div>
-        <img src="https://cobouw.pl/wp-content/uploads/produkcyjne-tresc1a-duze.jpg" alt="Hala produkcyjna z wtryskarkami">
-      </div>
-    </section>
+    <!-- MAIN CONTENT -->
   </main>
   <footer id="kontakt">
     <h2>Masz pytania? Porozmawiajmy.</h2>
