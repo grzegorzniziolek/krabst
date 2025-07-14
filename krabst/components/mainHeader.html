@@ -1,0 +1,37 @@
+<!-- ===== MAIN HEADER ===== -->
+<div class="main-header">
+  <div class="main-header__content">
+    <div class="main-header__text">
+      <h1 class="main-header__title">Personalizowane kasetki dla marek beauty</h1>
+      <p class="main-header__subtitle">Od konceptu do produkcji seryjnej — wspieramy Cię na każdym etapie tworzenia unikalnych opakowań dla Twojej marki.</p>
+      <button class="main-header__cta">Poznaj nasze produkty</button>
+    </div>
+    <div class="main-header__carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&h=400&fit=crop" alt="Beauty products" />
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=400&fit=crop" alt="Cosmetic packaging" />
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&h=400&fit=crop" alt="Beauty kit" />
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&h=400&fit=crop" alt="Luxury cosmetics" />
+        </div>
+        <button class="carousel-btn carousel-btn--prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="carousel-btn carousel-btn--next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="carousel-dots">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <link rel="stylesheet" href="css/mainHeader.css">
+  <script src="js/carusel.js"></script>

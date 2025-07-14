@@ -1,0 +1,20 @@
+When it might cause issues to add js script in body tag
+If the script manipulates or needs access to elements in the <body> before they exist in the DOM. For example:
+
+
+<head>
+  <script>
+    document.getElementById('btn').addEventListener('click', () => alert('Hi'));
+  </script>
+</head>
+<body>
+  <button id="btn">Click me</button>
+</body>
+
+
+Now I can see the problem! The issue is with the script loading order in your home.html file. Here are the problems:
+Scripts are loading in the <head> before the DOM elements exist
+The carousel.js script tries to access DOM elements that don't exist yet
+The navbar.js script is also loading before the DOM is ready
+
+Solution: scripts have to be added after body DOM construction so at the end of the body tag

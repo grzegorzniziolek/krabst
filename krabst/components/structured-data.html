@@ -1,0 +1,80 @@
+<!-- ===== STRUCTURED DATA - JSON-LD ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Krabst",
+  "url": "https://krabst.pl",
+  "logo": "https://krabst.pl/images/logo/verona-logo.png",
+  "description": "Specjaliści w projektowaniu i produkcji personalizowanych opakowań kosmetycznych dla marek beauty",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Przemysłowa 15",
+    "addressLocality": "Warszawa",
+    "postalCode": "00-000",
+    "addressCountry": "PL"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+48-123-456-789",
+    "contactType": "customer service",
+    "email": "kontakt@krabst.pl"
+  },
+  "sameAs": [
+    "https://facebook.com/krabst",
+    "https://instagram.com/krabst",
+    "https://linkedin.com/company/krabst"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Krabst",
+  "url": "https://krabst.pl",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://krabst.pl/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Personalizowane Opakowania Kosmetyczne",
+  "provider": {
+    "@type": "Organization",
+    "name": "Krabst"
+  },
+  "description": "Projektowanie i produkcja personalizowanych opakowań kosmetycznych dla marek beauty",
+  "serviceType": "Produkcja opakowań",
+  "areaServed": "Europe",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Usługi Krabst",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Produkty Gotowe",
+          "description": "Sprawdzone modele kasetek z możliwością personalizacji"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Projekty od Podstaw",
+          "description": "Projektowanie form od podstaw do produkcji seryjnej"
+        }
+      }
+    ]
+  }
+}
+</script> 

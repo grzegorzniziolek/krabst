@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  position: relative;
+  background: linear-gradient(29deg, #f8f9fa 0%, #e9ecef 100%);
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+  white-space: nowrap;
+  transition: left 0.3s, transform 0.3s, text-align 0.3s;
+}
+
+.navbar-menu {
+  margin-left: auto;
+  margin-right: 5vw;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-menu a:hover {
+  color: #007bff;
+}
+
+.navbar-hamburger {
+  display: none;
+  position: absolute;
+  right: 10vw;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Tablet and below: logo moves to left, menu stays right */
+@media (max-width: 1100px) {
+  .navbar-logo {
+    position: static;
+    left: auto;
+    transform: none;
+    margin-left: 4vw;
+    text-align: left;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+  .navbar-menu {
+    margin-right: 6vw;
+    gap: 1.5rem;
+  }
+  .navbar-hamburger {
+    right: 6vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-logo {
+    font-size: 1.7rem;
+    margin-left: 3vw;
+  }
+  .navbar-menu {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+    height: 60px;
+    z-index: 1000;
+    position: relative;
+  }
+  .navbar-logo {
+    font-size: 1.4rem;
+    margin-left: 3vw;
+  }
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(29deg, #f8f9fa 0%, #e9ecef 100%);
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 80px 2rem 2rem 2rem;
+    box-shadow: none;
+    gap: 2rem;
+    z-index: 999;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .navbar-menu.open {
+    display: flex;
+  }
+  .navbar-menu a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    text-align: center;
+    transition: color 0.3s, transform 0.3s;
+  }
+  .navbar-menu a:hover {
+    color: #007bff;
+    transform: scale(1.05);
+  }
+  .navbar-hamburger {
+    display: block;
+    z-index: 1001;
+  }
+} 

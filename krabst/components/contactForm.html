@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Krabst</title>
+
+          <link rel="stylesheet" href="css/contactForm.css">
+          <script src="js/contactForm.js"></script>
+</head>
+<body>
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Header -->
+            <div class="contact-header">
+                <h1>Kontakt & Wycena</h1>
+                <p>Opowiedz nam o swoim projekcie. Oferujemy bezpłatną konsultację i wycenę w ciągu 24 godzin.</p>
+            </div>
+
+            <!-- Contact Content -->
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Skontaktuj się z nami</h2>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>kontakt@krabst.pl</p>
+                                <a href="mailto:kontakt@krabst.pl">Napisz wiadomość</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3>Telefon</h3>
+                                <p>+48 123 456 789</p>
+                                <a href="tel:+48123456789">Zadzwoń teraz</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3>Adres</h3>
+                                <p>ul. Przemysłowa 15<br>00-000 Warszawa</p>
+                                <a href="https://maps.google.com" target="_blank">Zobacz na mapie</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">⏰</div>
+                            <div class="contact-details">
+                                <h3>Godziny pracy</h3>
+                                <p>Pon-Pt: 8:00 - 16:00<br>Sob: 9:00 - 13:00</p>
+                                <a href="#appointment">Umów spotkanie</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2>Formularz kontaktowy</h2>
+                        <p>Wypełnij formularz, a my skontaktujemy się z Tobą w ciągu 24 godzin z wyceną i propozycją.</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xyz" method="POST" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="required">Imię i nazwisko</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="required">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+48 123 456 789">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Nazwa firmy</label>
+                                <input type="text" id="company" name="company" class="form-input" placeholder="Twoja firma">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectType" class="required">Typ projektu</label>
+                            <select id="projectType" name="projectType" class="form-input form-select" required>
+                                <option value="">Wybierz typ projektu</option>
+                                <option value="ready-product">Produkt gotowy - personalizacja</option>
+                                <option value="custom-design">Projekt od podstaw</option>
+                                <option value="consultation">Konsultacja</option>
+                                <option value="quote">Wycena</option>
+                                <option value="other">Inne</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quantity">Liczba sztuk</label>
+                                <input type="number" id="quantity" name="quantity" class="form-input" min="1" placeholder="np. 1000">
+                            </div>
+                            <div class="form-group">
+                                <label for="deadline">Termin realizacji</label>
+                                <select id="deadline" name="deadline" class="form-input form-select">
+                                    <option value="">Wybierz termin</option>
+                                    <option value="urgent">Pilne (1-2 tygodnie)</option>
+                                    <option value="normal">Standardowe (1-2 miesiące)</option>
+                                    <option value="flexible">Elastyczne (3+ miesiące)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="required">Opis projektu</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Opisz swój projekt, wymagania, kolory, materiały..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="attachments">Załączniki (opcjonalnie)</label>
+                            <div class="file-upload" id="fileUpload">
+                                <input type="file" id="attachments" name="attachments" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                                <div class="file-upload-label">
+                                    <span>📎</span>
+                                    <span id="fileLabel">Przeciągnij pliki lub kliknij, aby wybrać</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-message" id="formMessage"></div>
+                        
+                        <div class="form-progress" id="formProgress">
+                            <div class="progress-spinner"></div>
+                            <span>Wysyłanie wiadomości...</span>
+                        </div>
+
+                        <button type="submit" class="form-submit" id="submitBtn">
+                            Wyślij zapytanie
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
