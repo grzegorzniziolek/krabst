@@ -91,114 +91,135 @@
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" role="navigation" aria-label="Główna nawigacja">
-    <div class="navbar-logo" aria-label="Logo Krabst">Krabst</div>
+    <div class="navbar-logo" aria-label="Logo Palettora">
+      <img src="images/main_icon_and_logo.png" alt="Palettora Logo" loading="eager">
+    </div>
     <button class="navbar-hamburger" id="navbarHamburger" aria-label="Przełącz menu" aria-expanded="false" aria-controls="navbarMenu">&#9776;</button>
     <div class="navbar-menu" id="navbarMenu" role="menubar">
-      <a href="home.html" role="menuitem">Strona główna</a>
-      <a href="aboutUs.html" role="menuitem" aria-current="page">O nas</a>
+      <a href="home.html" role="menuitem" aria-current="page">Strona główna</a>
+      <a href="aboutUs.html" role="menuitem">O nas</a>
       <a href="products.html" role="menuitem">Produkty</a>
+      <a href="contact.html" role="menuitem">Contact</a>
     </div>
   </nav>
 
   <!-- ===== MAIN CONTENT ===== -->
   <main class="about-main" role="main">
-
-    <!-- Company Story -->
-    <section class="company-story">
+    
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section">
       <div class="container">
+        <div class="hero-content">
+          <h1>O Nas</h1>
+          <p>Poznaj zespół Krabst - ekspertów w projektowaniu i produkcji opakowań kosmetycznych. Nasze doświadczenie i pasja w tworzeniu unikalnych rozwiązań dla marek beauty.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMPANY STORY SECTION ===== -->
+    <section class="story-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nasza Historia</h2>
+          <p>Rodzinna tradycja spotyka się z nowoczesną technologią</p>
+        </div>
+        
         <div class="story-content">
           <div class="story-text">
-            <h2>Nasza Historia</h2>
-            <p>Krabst powstał z pasji do tworzenia pięknych i funkcjonalnych opakowań. Od początku naszej działalności w 2020 roku, specjalizujemy się w projektowaniu i produkcji opakowań kosmetycznych dla marek beauty.</p>
-            <p>Nasz zespół składa się z doświadczonych projektantów, inżynierów i specjalistów ds. produkcji, którzy łączą kreatywność z precyzją techniczną.</p>
-            <p>Wierzymy, że każde opakowanie powinno nie tylko chronić produkt, ale także opowiadać historię marki i budować emocjonalną więź z klientem.</p>
+            <p class="story-intro">Jesteśmy rodzinną firmą z Polski, której historia sięga kilku dekad wstecz. Wszystko zaczęło się od naszego dziadka – utalentowanego rzemieślnika, który z pasją stworzył pierwszy zakład, samodzielnie inwestując w podstawowe maszyny takie jak frezarka czy duża wiertarka.</p>
+
+            <p>Dzięki jego zaangażowaniu firma dynamicznie się rozwijała, zatrudniając kolejnych pracowników i poszerzając park maszynowy. Z czasem zakład wyspecjalizował się w produkcji form i wyrobów z tworzyw sztucznych, zdobywając zaufanie lokalnych klientów.</p>
+
+            <p>Dziś, jako trzecie pokolenie, kontynuujemy dziedzictwo z dumą i odpowiedzialnością. Kultywujemy tradycję polskiego rzemiosła, ale patrzymy w przyszłość – inwestujemy w nowoczesne technologie, automatyzację, digitalizację i marketing, aby dotrzeć do klientów w całej Europie.</p>
+
+            <div class="story-highlight">
+              <h3>Krabst - Nowoczesne Opakowania z Tradycją</h3>
+              <p>Marka <strong>Krabst</strong> powstała z pasji do tworzenia pięknych i funkcjonalnych opakowań dla branży beauty. Od 2020 roku specjalizujemy się w projektowaniu i produkcji opakowań kosmetycznych, łącząc estetykę z funkcjonalnością.</p>
+            </div>
+
           </div>
-          <div class="story-image">
-            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=400&fit=crop" alt="Zespół Krabst przy pracy" loading="lazy">
+          
+          <div class="story-visual">
+            <div class="story-image">
+              <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=400&fit=crop" alt="Zespół Krabst przy pracy" loading="lazy">
+            </div>
+            <div class="story-stats">
+              <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Pokolenia</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2020</span>
+                <span class="stat-label">Rok założenia Krabst</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">EU</span>
+                <span class="stat-label">Zasięg europejski</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Values Section -->
+    <!-- ===== VALUES SECTION ===== -->
     <section class="values-section">
       <div class="container">
-        <h2>Nasze Wartości</h2>
+        <div class="section-header">
+          <h2>Nasze Wartości</h2>
+          <p>Zasady, które kierują naszym działaniem</p>
+        </div>
+        
         <div class="values-grid">
-          <div class="value-card">
+          <article class="value-card">
             <div class="value-icon">🎨</div>
-            <h3>Kreatywność</h3>
-            <p>Każdy projekt traktujemy jako unikalną okazję do stworzenia czegoś wyjątkowego. Łączymy innowacyjne pomysły z sprawdzonymi rozwiązaniami.</p>
-          </div>
-          <div class="value-card">
+            <div class="value-content">
+              <h3>Kreatywność</h3>
+              <p>Każdy projekt traktujemy jako unikalną okazję do stworzenia czegoś wyjątkowego. Łączymy innowacyjne pomysły z sprawdzonymi rozwiązaniami.</p>
+            </div>
+          </article>
+          
+          <article class="value-card">
             <div class="value-icon">⚡</div>
-            <h3>Jakość</h3>
-            <p>Nie kompromitujemy się w kwestii jakości. Każdy produkt przechodzi rygorystyczne testy i kontrolę jakości.</p>
-          </div>
-          <div class="value-card">
+            <div class="value-content">
+              <h3>Jakość</h3>
+              <p>Nie kompromitujemy się w kwestii jakości. Każdy produkt przechodzi rygorystyczne testy i kontrolę jakości.</p>
+            </div>
+          </article>
+          
+          <article class="value-card">
             <div class="value-icon">🤝</div>
-            <h3>Partnerstwo</h3>
-            <p>Traktujemy naszych klientów jak partnerów. Współpracujemy blisko na każdym etapie projektu.</p>
-          </div>
-          <div class="value-card">
+            <div class="value-content">
+              <h3>Partnerstwo</h3>
+              <p>Traktujemy naszych klientów jak partnerów. Współpracujemy blisko na każdym etapie projektu.</p>
+            </div>
+          </article>
+          
+          <article class="value-card">
             <div class="value-icon">🌱</div>
-            <h3>Zrównoważony Rozwój</h3>
-            <p>Oferujemy ekologiczne rozwiązania i materiały przyjazne środowisku, nie rezygnując z jakości.</p>
-          </div>
+            <div class="value-content">
+              <h3>Zrównoważony Rozwój</h3>
+              <p>Oferujemy ekologiczne rozwiązania i materiały przyjazne środowisku, nie rezygnując z jakości.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
-      <div class="container">
-        <h2>Nasz Zespół</h2>
-        <div class="team-grid">
-          <div class="team-member">
-            <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Jan Kowalski - Dyrektor Generalny" loading="lazy">
-            </div>
-            <div class="member-info">
-              <h3>Jan Kowalski</h3>
-              <p class="member-position">Dyrektor Generalny</p>
-              <p class="member-description">15 lat doświadczenia w branży opakowań. Specjalista w zarządzaniu projektami i relacjach z klientami.</p>
-            </div>
-          </div>
-          <div class="team-member">
-            <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" alt="Anna Nowak - Kierownik Projektów" loading="lazy">
-            </div>
-            <div class="member-info">
-              <h3>Anna Nowak</h3>
-              <p class="member-position">Kierownik Projektów</p>
-              <p class="member-description">Ekspert w projektowaniu opakowań premium. Prowadzi zespoły projektowe i dba o jakość realizacji.</p>
-            </div>
-          </div>
-          <div class="team-member">
-            <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Piotr Wiśniewski - Dyrektor Techniczny" loading="lazy">
-            </div>
-            <div class="member-info">
-              <h3>Piotr Wiśniewski</h3>
-              <p class="member-position">Dyrektor Techniczny</p>
-              <p class="member-description">Inżynier z 12-letnim doświadczeniem w produkcji. Specjalista w optymalizacji procesów produkcyjnych.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
+    <!-- ===== CTA SECTION ===== -->
     <section class="cta-section">
       <div class="container">
-        <h2>Rozpocznij Współpracę</h2>
-        <p>Jesteśmy gotowi pomóc Ci stworzyć opakowania, które wyróżnią Twoją markę na rynku.</p>
-        <div class="cta-buttons">
-          <a href="mailto:kontakt@krabst.pl" class="cta-primary">Skontaktuj się z nami</a>
-          <a href="products.html" class="cta-secondary">Zobacz nasze produkty</a>
+        <div class="cta-content">
+          <h2>Rozpocznij Współpracę</h2>
+          <p>Jesteśmy gotowi pomóc Ci stworzyć opakowania, które wyróżnią Twoją markę na rynku.</p>
+          <div class="cta-buttons">
+            <a href="contactForm.html" class="cta-primary">Skontaktuj się z nami</a>
+            <a href="products.html" class="cta-secondary">Zobacz nasze produkty</a>
+          </div>
         </div>
       </div>
     </section>
+    
   </main>
 
   <!-- ===== FOOTER ===== -->

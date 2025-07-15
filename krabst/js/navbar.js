@@ -37,6 +37,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Highlight current menu item based on URL
+  const currentPath = window.location.pathname.split('/').pop().toLowerCase();
+  menuLinks.forEach(link => {
+    // Remove any previous aria-current
+    link.removeAttribute('aria-current');
+    // Get the href target (just the filename, case-insensitive)
+    const linkTarget = link.getAttribute('href') ? link.getAttribute('href').split('/').pop().toLowerCase() : '';
+    // Special case: home page can be '' or 'home.html' or 'index.html'
+    if (
+      (currentPath === '' && (linkTarget === 'home.html' || linkTarget === 'index.html')) ||
+      (currentPath === linkTarget) ||
+      (currentPath === '' && linkTarget === '')
+    ) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+
   // Close menu when clicking outside (mobile)
   document.addEventListener('click', (e) => {
     if (window.innerWidth <= 600 && menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {

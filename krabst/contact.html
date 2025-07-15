@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Krabst</title>
 
-          <link rel="stylesheet" href="css/contactForm.css">
-          <script src="js/contactForm.js"></script>
+    <link rel="stylesheet" href="css/contactForm.css">
+    <script src="js/contactForm.js"></script>
+
+    <!-- ===== PRELOAD CRITICAL RESOURCES ===== -->
+  <link rel="preload" href="css/navbar.css" as="style">
+  <link rel="preload" href="css/mainHeader.css" as="style">
+  <link rel="preload" href="js/navbar.js" as="script">
+  
+  <!-- ===== STYLES ===== -->
+  <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
+    <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Główna nawigacja">
+    <div class="navbar-logo" aria-label="Logo Palettora">
+      <img src="images/main_icon_and_logo.png" alt="Palettora Logo" loading="eager">
+    </div>
+    <button class="navbar-hamburger" id="navbarHamburger" aria-label="Przełącz menu" aria-expanded="false" aria-controls="navbarMenu">&#9776;</button>
+    <div class="navbar-menu" id="navbarMenu" role="menubar">
+      <a href="home.html" role="menuitem" aria-current="page">Strona główna</a>
+      <a href="aboutUs.html" role="menuitem">O nas</a>
+      <a href="products.html" role="menuitem">Produkty</a>
+      <a href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+
+
     <section class="contact-section">
         <div class="contact-container">
             <!-- Header -->
